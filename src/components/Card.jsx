@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 const Card = props => {
     const {item} = props;
@@ -11,7 +12,7 @@ const Card = props => {
                     <h4>{item.animal}</h4>
                     <h4>{item.color}</h4>
                     <h4>${item.price}</h4>
-                    <button className = "btn btn-primary">Product Description</button> <button className = "btn btn-success">Buy</button>
+                    <Link to ={`/item/${item._id}`}><button className ="btn btn-primary">Description</button></Link> <button className = "btn btn-success">Buy</button>
                 </div>
             </div>
         </>
